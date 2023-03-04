@@ -9,9 +9,13 @@ import org.aspectj.lang.annotation.Pointcut;
 
 @Slf4j
 @Aspect
-public class AspectV1 {
+public class AspectV2 {
 
-    @Around("execution(* hello.aop.order..*(..))")
+    @Pointcut("execution(* hello.aop.order..*(..))")
+    private void allOrder(){};
+
+
+    @Around("allOrder()")
     public Object doLog(ProceedingJoinPoint joinPoint) throws Throwable {
         log.info("[log] {}", joinPoint.getSignature());
         return joinPoint.proceed();
