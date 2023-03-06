@@ -11,6 +11,7 @@ import org.aspectj.lang.annotation.Pointcut;
 @Aspect
 public class AspectV1 {
 
+
     @Around("execution(* hello.aop.order..*(..))")
     public Object doLog(ProceedingJoinPoint joinPoint) throws Throwable {
         log.info("[log] {}", joinPoint.getSignature());
