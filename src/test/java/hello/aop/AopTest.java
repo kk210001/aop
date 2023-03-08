@@ -18,7 +18,8 @@ import org.springframework.context.annotation.Import;
 //@Import(AspectV2.class) //포인트컷과 어드바이스 분리
 //@Import(AspectV3.class) //여러 포인트컷
 //@Import(AspectV4PointCut.class) //포인트컷 외부
-@Import({AspectV5Order.LogAspect.class, AspectV5Order.TxAspect.class}) //어드바이스 순서 지정
+//@Import({AspectV5Order.LogAspect.class, AspectV5Order.TxAspect.class}) //어드바이스 순서 지정
+@Import(AspectV6Advice.class) //어드바이스 순서 지정
 public class AopTest {
 
 
