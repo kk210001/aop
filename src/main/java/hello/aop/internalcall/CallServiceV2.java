@@ -21,7 +21,7 @@ public class CallServiceV2 {
     public void external() {
         log.info("call external");
         CallServiceV2 callServiceV2 = callServiceProvider.getObject();
-        callServiceV2.internal(); //this.internal();
+        callServiceV2.internal();
     }
 
     public void internal() {
